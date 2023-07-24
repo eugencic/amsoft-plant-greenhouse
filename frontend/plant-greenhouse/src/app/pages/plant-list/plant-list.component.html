@@ -1,0 +1,33 @@
+<div class="list-box">
+  <table class="table" aria-label="Table with plants">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Species</th>
+      <th scope="col">Native region</th>
+  <!--    <th scope="col">Date</th>-->
+      <th scope="col">Family</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let plant of plants; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{plant.name}}</td>
+      <td>{{plant.species}}</td>
+      <td>{{plant.nativeRegion}}</td>
+  <!--    <td>{{plant.createdAt}}</td>-->
+  <!--    <td>{{plant.family?.name}}</td>-->
+      <td *ngIf="plant.family">{{plant.family.name}}</td>
+      <td *ngIf="!plant.family" class="text-danger">No family</td>
+      <td>
+        <button class="edit-button" (click)="editPlant(plant)">Edit</button>
+        <button class="delete-button" (click)="deletePlant(plant)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="button" (click)="createPlant()">New Plant</button>
+  <button class="home-button" (click)="goToHome()">Home</button>
+</div>

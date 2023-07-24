@@ -1,0 +1,88 @@
+.list-box {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.table {
+  width: 70%;
+  border: 5px solid #407A52;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #313D35;
+}
+
+.table thead th {
+  background-color: #407A52;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+}
+
+.table tbody {
+  background-color: #E8FFCE;
+}
+
+.table tbody td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid #407A52;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table .text-danger {
+  color: #9D2933;
+}
+
+.table tbody tr:hover {
+  background-color: #6B9362;
+}
+
+.button {
+  width: 120px;
+  background-color: #407A52;
+  color: whitesmoke;
+  padding: 10px 20px;
+  margin: 20px 10px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #407A52;
+  color: whitesmoke;
+  padding: 10px 20px;
+  margin: 0px 5px 5px 0px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: #9D2933;
+  color: whitesmoke;
+  padding: 10px 20px;
+  margin: 0px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button {
+  background-color: #407A52;
+  color: whitesmoke;
+  padding: 10px 20px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

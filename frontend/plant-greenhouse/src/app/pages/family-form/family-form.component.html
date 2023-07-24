@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-box">
+    <table class="table">
+      <thead>
+      <th scope="col">CREATE / EDIT A FAMILY</th>
+      </thead>
+      <tbody>
+      <tr class="row">
+        <td>
+          <mat-form-field appearance="outline" class="input">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name" required>
+            <mat-error *ngIf="form.controls['name'].hasError('required')">Please provide a name.</mat-error>
+            <mat-error *ngIf="form.controls['name'].hasError('minlength')">Minimum 5 characters.</mat-error>
+            <mat-error *ngIf="form.controls['name'].hasError('maxlength')">Maximum 30 characters.</mat-error>
+          </mat-form-field>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="button-box">
+      <button type="submit" class="button" [disabled]="!form.valid">Submit</button>
+    </div>
+    <div class="button-box">
+      <button class="home-button" (click)="goToHome()">Home</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,25 @@
+<div class="list-box">
+  <table class="table" aria-label="Table with families">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Id</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let family of families; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{family.name}}</td>
+      <td>{{family.familyId}}</td>
+      <td>
+        <button class="edit-button" (click)="editFamily(family)">Edit</button>
+        <button class="delete-button" (click)="deleteFamily(family)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <button class="button" (click)="createFamily()">New Family</button>
+  <button class="home-button" (click)="goToHome()">Home</button>
+</div>
